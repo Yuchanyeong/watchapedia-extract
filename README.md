@@ -2,16 +2,18 @@
 
 왓챠피디아에서 내 영화 평가 목록을 CSV 파일로 추출하는 스크립트입니다.
 
-아마 기존의 코드 한줄만 실행하면 되는 간단한 추출 방법(https://github.com/erinyskim/watchapedia-export)이 왓챠 API 클라이언트 검증이 강화됨에 따라 실행이 안되는 것 같아서, 임시방편으로 직접 fetch 인터셉터로 요청을 가로채는 방식을 사용했습니다. 순서를 따라서 실행해보세요.
+아마 기존의 코드 한줄만 실행하면 되는 간단한 추출 방법이 왓챠 API 클라이언트 검증이 강화됨에 따라 실행이 안되는 것 같아서, 임시방편으로 직접 fetch 인터셉터로 요청을 가로채는 방식을 사용했습니다. 순서를 따라서 실행해보세요.
+
+기존 방식 https://github.com/erinyskim/watchapedia-export
 
 ## 사용법
 
-### 1. 평가 목록 페이지 접속
+### 1. 왓챠피디아 평가 목록 페이지 접속
 
-### 주의!
+> ### 주의!
 
 - 제공되는 코드는 평가한 작품들 페이지에서만 작동됩니다.
-- 따라서 로그인 후 ratings 페이지까지 이동 후 실행해야합니다.
+- 따라서 로그인 후 ratings 페이지까지 이동 후 실행해야 합니다.
 
 ```
 https://pedia.watcha.com/ko-KR/users/{유저코드}/contents/movies/ratings
@@ -26,7 +28,7 @@ https://pedia.watcha.com/ko-KR/users/{유저코드}/contents/movies/ratings
 
 ### 3. 1단계 코드 실행
 
-- `watcha_step1.js` 내용을 콘솔에 붙여넣고 실행합니다.
+- `watcha_step1.js` 내용을 콘솔에 붙여넣고 실행(엔터)합니다.
 
 ![2단계](images/step2.png)
 
@@ -56,7 +58,7 @@ https://pedia.watcha.com/ko-KR/users/{유저코드}/contents/movies/ratings
 
 ![5단계](images/step5.png)
 
-- 이후 추출된 csv 파일을 다른 서비스로 옮기시면 되겠습니다.
+- 이후 추출된 csv 파일을 사용해 다른 서비스로 옮기시면 되겠습니다.
 
 ## 주의사항
 
